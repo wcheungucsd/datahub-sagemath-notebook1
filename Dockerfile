@@ -17,7 +17,9 @@ LABEL maintainer="wcheung@ucsd.edu"
 #USER root
 
 USER root
-RUN apt-get clean && sudo apt-get update
+RUN apt-get -y clean && apt-get -y update
+
+RUN apt-get -y install make
 
 
 USER sage

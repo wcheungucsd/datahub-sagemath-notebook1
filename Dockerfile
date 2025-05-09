@@ -16,6 +16,10 @@ LABEL maintainer="wcheung@ucsd.edu"
 # 2) change to root to install packages
 #USER root
 
+USER root
+RUN apt-get clean && sudo apt-get update
+
+
 USER sage
 RUN sage -i jupyterlab jupyterlab_widgets retrolab
 
